@@ -158,12 +158,18 @@ li::before {
   display: block;
   margin-bottom: 10px; /* Adjust the margin as needed */
   font-size: 1.5em;
+  font-weight: bold;
 }
 
+.bullet {
+  display: flex;
+  flex-direction: row;
+}
 .features-icon {
-  position: absolute;
-  left: -90px;
-  bottom: 55px;
+  position: relative;
+  bottom: 12px;
+  padding-right: 20px;
+  width: 50px;
 }
 
 /*Footer*/
@@ -273,13 +279,6 @@ li::before {
 
   .menu.show {
     display: flex; /* Show the menu when the 'show' class is added */
-  }
-
-  .features-icon {
-    position: relative;
-    left: 150px;
-    top: 78px;
-    width: 40px;
   }
 
   .footer-content a {
