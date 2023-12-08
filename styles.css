@@ -9,53 +9,36 @@ body {
   font-size: 18px;
 }
 
-.tab-logo {
-  width: 20px;
-}
-
 a {
   color: #fff;
 }
 
 .appbar {
+  display: flex;
+  flex-direction: column;
   background: #333;
   padding: 10px;
   text-align: center;
   position: fixed;
   width: 100%;
-  top: 0;
+  margin-top: 0;
   z-index: 1000;
+  font-size: 0.8em;
 }
 
-.menu-icon {
-  font-size: 1.5em;
-  cursor: pointer;
-  display: none; /* Hide the menu icon by default on larger screens */
-  position: absolute;
-  cursor: pointer;
-  top: 15px; /* Adjust the top position as needed */
-  right: 100px;
+.appbar li {
+  display: inline;
 }
 
-.menu {
-  display: flex;
-  justify-content: center;
-}
-
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.menu a:hover {
-  text-decoration: underline;
+.appbar ul {
+  margin: 0;
+  padding: 0;
 }
 
 .appbar a {
   color: #fff;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 .appbar a:hover {
@@ -212,7 +195,6 @@ li::before {
   align-items: center; /* Align items along the y-axis */
 }
 
-
 /*CONTACT PAGE*/
 
 .contact-info-container {
@@ -230,14 +212,20 @@ li::before {
   h1 {
     font-size: 3em;
     padding-bottom: 10px;
+    position: relative;
+    bottom: 350px;
   }
 
   p {
     font-size: 1.5em;
   }
 
+  .description {
+    position: relative;
+    bottom: 300px;
+  }
+
   ul {
-    padding-top: 50px;
     padding-left: 20px;
     font-size: 1.2em;
   }
@@ -261,7 +249,6 @@ li::before {
   ul.features-list {
     list-style-type: none;
     padding-left: 0;
-    padding-top: 100px;
     font-size: 1.2em;
     line-height: 1.6;
   }
@@ -270,23 +257,8 @@ li::before {
     display: block; /* Display the menu icon on smaller screens */
   }
 
-  .menu {
-    display: none; /* Hide the menu by default on smaller screens */
-    flex-direction: column;
-    background: #333;
-    position: fixed;
-    width: 100%;
-    height: 100%; /* Take the whole screen height */
-    top: 0;
-    z-index: 1000; /* Ensure the menu is above the appbar */
-  }
-
   .menu.show {
     display: flex; /* Show the menu when the 'show' class is added */
-  }
-
-  .appbar {
-    padding: 30px;
   }
 
   .features-icon {
@@ -296,17 +268,14 @@ li::before {
     width: 40px;
   }
 
- 
-
   .footer-content a {
     flex-direction: column;
     align-items: center;
     display: block;
     margin: 0;
     font-size: 2.2em;
-
   }
-  
+
   .footer {
     margin-top: 30px;
   }
@@ -314,9 +283,102 @@ li::before {
     width: 150px;
   }
 
+  #toggle {
+    display: block;
+    width: 28px;
+    height: 30px;
+    margin: 30px auto 10px;
+  }
 
+  #toggle span:after,
+  #toggle span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+  }
+  #toggle span:after {
+    top: 9px;
+  }
+  #toggle span {
+    position: relative;
+    display: block;
+  }
 
+  #toggle span,
+  #toggle span:after,
+  #toggle span:before {
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
 
+  /* on activation */
+  #toggle.on span {
+    background-color: transparent;
+  }
+  #toggle.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #toggle.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+  #toggle.on + #menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* menu appearance*/
+  #menu {
+    position: relative;
+    color: #333;
+    width: 250px;
+    padding: 30px;
+    margin: auto;
+
+    text-align: center;
+    border-radius: 10px;
+    background: #333;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    /* just for this demo */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s;
+  }
+  #menu:after {
+    position: absolute;
+    top: -15px;
+    left: 139px;
+    content: "";
+    display: block;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid #333;
+  }
+  ul,
+  li,
+  li a {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  li a {
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: all 0.2s;
+  }
+  li a:hover,
+  li a:focus {
+    background: #1abc9c;
+    color: #fff;
+  }
+}
 
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 600px) {
