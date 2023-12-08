@@ -9,6 +9,14 @@ body {
   font-size: 18px;
 }
 
+.tab-logo {
+  width: 20px;
+}
+
+a {
+  color: #fff;
+}
+
 .appbar {
   background: #333;
   padding: 10px;
@@ -66,7 +74,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-p {
+.container p {
   font-size: 2em;
   margin-top: 40px;
 }
@@ -163,22 +171,9 @@ li::before {
 
 /*Footer*/
 
-.footer-container {
-}
-
-.footer {
-  font-size: 0.5em;
-  color: #fff;
-  background-color: #333;
-  padding-bottom: 110px;
-  justify-content: center;
-  display: flex;
-}
-
 .footer a {
   position: relative;
   padding: 10px;
-  bottom: 25px;
   color: #fff;
   text-decoration: none;
   margin: 20px;
@@ -196,15 +191,33 @@ li::before {
   border-bottom: 7vw solid #333;
 }
 
-.footer-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: -150px;
-}
 .footer-logo {
-  width: 10%;
+  position: relative;
+  width: 200px;
+}
+
+.footer {
+  font-size: 0.5em;
+  color: #fff;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: #333;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items along the y-axis */
+}
+
+
+/*CONTACT PAGE*/
+
+.contact-info-container {
+  margin-top: 100px;
+  font-size: 0.7em;
 }
 
 /* Media Queries */
@@ -277,28 +290,33 @@ li::before {
   }
 
   .features-icon {
-    position: absolute;
-    bottom: 210px;
-    left: 200px;
-    font-size: 1.5em;
+    position: relative;
+    left: 150px;
+    top: 78px;
+    width: 40px;
   }
 
+ 
+
+  .footer-content a {
+    flex-direction: column;
+    align-items: center;
+    display: block;
+    margin: 0;
+    font-size: 2.2em;
+
+  }
+  
   .footer {
-    display: list-item;
+    margin-top: 30px;
   }
-}
+  .footer-logo {
+    width: 150px;
+  }
 
-/*CONTACT PAGE*/
 
-/* Additional styles for the contact page */
-.contact-info {
-  font-size: 1.2em;
-  margin-top: 20px;
-}
 
-.contact-info a {
-  color: #fff;
-}
+
 
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 600px) {
