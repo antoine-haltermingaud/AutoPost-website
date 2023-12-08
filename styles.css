@@ -1,3 +1,19 @@
+.pricing-table-container {
+  width: 30vw;
+  margin: 0 auto;
+}
+
+.tile {
+  width: 50vw;
+  height: auto;
+  border-radius: 20px;
+  background-color: #085f7d;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  margin-bottom: 150px;
+}
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;

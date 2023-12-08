@@ -4,49 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Auto Post AI</title>
+  <title>Auto Post AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link class="tab-logo" rel="icon" type="image/autotweetlogo" href="assets/autopostlogo.ico">
 
 </head>
 
 <body>
-
   <a href="#menu" id="toggle"><span></span></a>
 
   <div id="menu" class="appbar">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="index.html">Features</a></li>
-      <li><a href="index.html">Pricing</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="checkout.html">Pricing</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 
-  <div class="container">
-    <h1 class="title">Contact Us</h1>
-    <p class="description">Have questions, suggestions or any inqueries? <br> Please reach out to us!</p>
 
-    <div class="contact-info-container">
-      <p class="contact-info">You can contact us at: <a href="mailto:info@autopost.ai">info@autopost.ai</a></p>
+  <div class="tile">
+    <div class="pricing-table-container ">
+      <div class="stripe-pricing-table">
+        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+        <stripe-pricing-table pricing-table-id="prctbl_1OL5ItGuEzAOlL7MqQmRnjoI"
+          publishable-key="pk_test_51OKNTcGuEzAOlL7MvQmn4GPcIuVKA7EsdENJ1PEQnxO8IxNewgWS4koOcM0PScrq2Jdyxy7dsbKGveJfAQMczdO500Cyx55Dgo">
+        </stripe-pricing-table>
+      </div>
     </div>
   </div>
+
+
   <div class="separator"></div>
   <section class="footer-container">
     <div class="footer-content">
       <div class="footer">
         <a href="index.html">Home</a>
         <a href="index.html">Features</a>
-        <a href="index.html">Pricing</a>
+        <a href="checkout.html">Pricing</a>
         <a href="contact.html">Contact</a>
       </div>
       <img class="footer-logo" src="assets/autopostlogo.png" alt="logo">
     </div>
 
   </section>
-
-
   <script src="scripts.js"></script>
+
+
+
 </body>
+
+
+
+
+
 
 </html>
