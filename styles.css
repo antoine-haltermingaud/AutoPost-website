@@ -367,7 +367,6 @@ li::before {
     width: 250px;
     padding: 30px;
     margin: auto;
-
     text-align: center;
     border-radius: 10px;
     background: #333;
@@ -406,6 +405,29 @@ li::before {
   li a:focus {
     background: #1abc9c;
     color: #fff;
+  }
+
+  .pricing-table-container {
+    width: 85vw;
+    margin-top: 0;
+    margin: auto auto;
+    height: 80vh;
+  }
+
+  .tile {
+    position: relative;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .contact-info-container p {
+    position: relative;
+  }
+
+  .tile-container {
+    position: relative;
+    bottom: 250px;
+    margin: 0;
   }
 }
 
