@@ -241,8 +241,7 @@ li::before {
 /* Media Queries */
 @media only screen and (max-width: 600px) {
   body {
-    background: linear-gradient(45deg, #4caf50, #008cba);
-    background-size: 100% 130%;
+    background-size: 400% 400%;
   }
 
   h1 {
